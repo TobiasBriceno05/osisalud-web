@@ -206,7 +206,24 @@ const SocialBlock = () => (
   </div>
 );
 
-const ContactForm = ({ formData, handleChange, handleSubmit, isSubmitting }: { formData: any; handleChange: any; handleSubmit: any; isSubmitting: boolean }) => (
+const ContactForm = ({
+  formData,
+  handleChange,
+  handleSubmit,
+  isSubmitting,
+}: {
+  formData: {
+    name: string;
+    company: string;
+    email: string;
+    phone: string;
+    sede: string;
+    message: string;
+  };
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
+  handleSubmit: (e: React.FormEvent) => Promise<void>;
+  isSubmitting: boolean;
+}) => (
   <form onSubmit={handleSubmit} className="bg-background rounded-2xl p-8 space-y-5 shadow-lg border border-border">
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
       <div>
@@ -283,7 +300,26 @@ const SidebarInfo = ({ isInView }: { isInView: boolean }) => (
   </motion.div>
 );
 
-const FormBlock = ({ isInView, formData, handleChange, handleSubmit, isSubmitting }: { isInView: boolean; formData: any; handleChange: any; handleSubmit: any; isSubmitting: boolean }) => (
+const FormBlock = ({
+  isInView,
+  formData,
+  handleChange,
+  handleSubmit,
+  isSubmitting,
+}: {
+  isInView: boolean;
+  formData: {
+    name: string;
+    company: string;
+    email: string;
+    phone: string;
+    sede: string;
+    message: string;
+  };
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
+  handleSubmit: (e: React.FormEvent) => Promise<void>;
+  isSubmitting: boolean;
+}) => (
   <motion.div
     initial={{ opacity: 0, x: 20 }}
     animate={isInView ? { opacity: 1, x: 0 } : {}}
