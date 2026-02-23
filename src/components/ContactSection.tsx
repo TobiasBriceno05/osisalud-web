@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Phone, MapPin, Instagram, Facebook, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Send, Loader2, Youtube } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const sedes = [
@@ -196,6 +196,9 @@ const SocialBlock = () => (
           </a>
           <a href={unit.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
             <Facebook className="h-5 w-5" />
+          </a>
+          <a href="https://youtube.com/@osisalud?si=giMSDBzSg3sw_jdt" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary/20 transition-colors">
+            <Youtube className="h-5 w-5" />
           </a>
         </div>
       </div>
